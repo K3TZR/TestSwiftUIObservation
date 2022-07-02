@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TestSwiftUIObservationApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    
+    let model = Model()
+    
+    WindowGroup {
+      ContentView(model: model)
     }
+  }
 }

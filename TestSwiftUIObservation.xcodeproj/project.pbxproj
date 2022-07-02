@@ -11,6 +11,8 @@
 		9FBD294B287093720074959E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD294A287093720074959E /* ContentView.swift */; };
 		9FBD294D287093720074959E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD294C287093720074959E /* Assets.xcassets */; };
 		9FBD2950287093720074959E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD294F287093720074959E /* Preview Assets.xcassets */; };
+		9FBD2958287093880074959E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD2957287093880074959E /* Model.swift */; };
+		9FBD295A287093E50074959E /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD2959287093E50074959E /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		9FBD294C287093720074959E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FBD294F287093720074959E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FBD2951287093720074959E /* TestSwiftUIObservation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestSwiftUIObservation.entitlements; sourceTree = "<group>"; };
+		9FBD2957287093880074959E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9FBD2959287093E50074959E /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				9FBD294C287093720074959E /* Assets.xcassets */,
 				9FBD2951287093720074959E /* TestSwiftUIObservation.entitlements */,
 				9FBD294E287093720074959E /* Preview Content */,
+				9FBD2957287093880074959E /* Model.swift */,
+				9FBD2959287093E50074959E /* Counter.swift */,
 			);
 			path = TestSwiftUIObservation;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBD295A287093E50074959E /* Counter.swift in Sources */,
+				9FBD2958287093880074959E /* Model.swift in Sources */,
 				9FBD294B287093720074959E /* ContentView.swift in Sources */,
 				9FBD2949287093720074959E /* TestSwiftUIObservationApp.swift in Sources */,
 			);
