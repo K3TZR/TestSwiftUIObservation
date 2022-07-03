@@ -1,5 +1,5 @@
 //
-//  Counter.swift
+//  Slice.swift
 //  TestSwiftUIObservation
 //
 //  Created by Douglas Adams on 7/2/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Counter: ObservableObject {
+public class Slice: ObservableObject {
   @Published var count: Int
   @Published var name: String
   

@@ -8,16 +8,16 @@
 import Foundation
 
 public class Model: ObservableObject {
-  public init(selectedCounter: Counter? = nil) {
-    self.selectedCounter = selectedCounter
+  public init(activeSlice: Slice? = nil) {
+    self.activeSlice = activeSlice
   }
   
-  @Published var selectedCounter: Counter?
+  @Published var activeSlice: Slice?
   
-  @Published public var counters =
+  @Published public var slices =
   [
-    Counter(count: 0, name: "Units Counter"),
-    Counter(count: 100, name: "Hundreds Counter"),
-    Counter(count: 1000, name: "Thousands Counter")
+    Slice(count: 0, name: "Units Slice"),
+    Slice(count: 100, name: "Hundreds Slice"),
+    Slice(count: 1000, name: "Thousands Slice")
   ]
 }
