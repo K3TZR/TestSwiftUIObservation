@@ -16,8 +16,8 @@ public class Model: ObservableObject {
   
   @Published public var slices =
   [
-    Slice(count: 0, name: "Units Slice"),
-    Slice(count: 100, name: "Hundreds Slice"),
-    Slice(count: 1000, name: "Thousands Slice")
+    Slice(frequency: 10, name: "Slice 0"),
+    Slice(frequency: 100, name: "Slice 1"),
+    Slice(frequency: 1000, name: "Slice 2")
   ]
 }

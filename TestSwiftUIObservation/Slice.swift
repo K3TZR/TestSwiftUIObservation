@@ -12,11 +12,11 @@ public class Slice: Equatable, ObservableObject {
     lhs.name == rhs.name
   }
   
-  @Published var count: Int
+  @Published var frequency: Int
   @Published var name: String
   
-  public init(count: Int, name: String) {
-    self.count = count
+  public init(frequency: Int, name: String) {
+    self.frequency = frequency
     self.name = name
   }
 }

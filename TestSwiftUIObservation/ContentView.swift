@@ -54,10 +54,13 @@ struct CountView: View {
     
     let _ = Self._printChanges()
     
-    Text("\(activeSlice.count)")
+    HStack {
+      Text("Frequency")
+      Text("\(activeSlice.frequency)")
+    }
     Button("incr") {
-      activeSlice.count += 1
-      print("Slice = \(activeSlice.count)")
+      activeSlice.frequency += 1
+      print("Slice = \(activeSlice.frequency)")
     }
   }
 }
