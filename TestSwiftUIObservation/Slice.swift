@@ -7,7 +7,11 @@
 
 import Foundation
 
-public class Slice: ObservableObject {
+public class Slice: Equatable, ObservableObject {
+  public static func == (lhs: Slice, rhs: Slice) -> Bool {
+    lhs.name == rhs.name
+  }
+  
   @Published var count: Int
   @Published var name: String
   

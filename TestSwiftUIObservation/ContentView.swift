@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
   @ObservedObject var model: Model
 
+  @State var currentActiveSlice: Slice? = nil
+  
   var body: some View {
     
     let _ = Self._printChanges()
@@ -18,20 +20,26 @@ struct ContentView: View {
       if model.activeSlice == nil {
         Text("No Slice selected")
       } else {
-        HStack {
-          Text(model.activeSlice!.name)
-          CountView(activeSlice: model.activeSlice!)
-        }
+        Text(model.activeSlice!.name)
+        CountView(activeSlice: model.activeSlice!)
       }
       
+      Spacer()
       Button("change slice") {
+        var newActiveSlice: Slice?
+        // new activeSlice is 0, 1, 2 or nil
         let index = Int.random(in: 0..<4)
         if index == 3 {
-            model.activeSlice = nil
+            newActiveSlice = nil
         } else {
-          model.activeSlice = model.slices[index]
+          newActiveSlice = model.slices[index]
         }
-        print("activeSlice = \(model.activeSlice?.name ?? "none")")
+        // only change the property if the new (random selection) is different from current
+        if currentActiveSlice != newActiveSlice {
+          model.activeSlice = newActiveSlice
+          currentActiveSlice = newActiveSlice
+          print("-----> new activeSlice = \(model.activeSlice?.name ?? "none")")
+        }
       }
     }
     .frame(width: 200, height: 150)
@@ -41,18 +49,16 @@ struct ContentView: View {
 
 struct CountView: View {
   @ObservedObject var activeSlice: Slice
-
+  
   var body: some View {
     
     let _ = Self._printChanges()
-    VStack {
+    
     Text("\(activeSlice.count)")
-      Button("incr") {
-        activeSlice.count += 1
-        print("Slice = \(activeSlice.count)")
-      }
+    Button("incr") {
+      activeSlice.count += 1
+      print("Slice = \(activeSlice.count)")
     }
-      .padding()
   }
 }
 
