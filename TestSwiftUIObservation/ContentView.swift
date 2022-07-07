@@ -14,7 +14,7 @@ struct ContentView: View {
   
   var body: some View {
     
-    let _ = Self._printChanges()
+//    let _ = Self._printChanges()
     
     VStack {
       if model.activeSlice == nil {
@@ -38,7 +38,7 @@ struct ContentView: View {
         if currentActiveSlice != newActiveSlice {
           model.activeSlice = newActiveSlice
           currentActiveSlice = newActiveSlice
-          print("-----> new activeSlice = \(model.activeSlice?.name ?? "none")")
+          print("-----> new activeSlice = \(model.activeSlice?.name ?? "none"), frequency = \(model.activeSlice?.frequency ?? -1)")
         }
       }
     }
@@ -52,7 +52,7 @@ struct CountView: View {
   
   var body: some View {
     
-    let _ = Self._printChanges()
+//    let _ = Self._printChanges()
     
     HStack {
       Text("Frequency")
@@ -60,7 +60,7 @@ struct CountView: View {
     }
     Button("incr") {
       activeSlice.frequency += 1
-      print("Slice = \(activeSlice.frequency)")
+      print("-----> \(activeSlice.name), frequency = \(activeSlice.frequency)")
     }
   }
 }
